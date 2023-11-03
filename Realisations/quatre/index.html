@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Quatre</title>
+    </head>
+    <body>
+        <div class="bday">
+            <h2 class="title1">Happy Birthday</h2>
+        </div>
+        <div class="name">
+           <h4 class="title2">Kolony Makembele <br> Marie-Veronique</h4> 
+        </div>
+        <div class="wrapper">
+            <div class="img-area">
+                <div class="single-img img-one">
+                    <img src="img/1.jpg" alt="one">
+                </div>
+                <div class="single-img img-two">
+                    <img src="img/2.jpg" alt="one">
+                </div>
+                <div class="single-img img-three">
+                    <img src="img/3.jpg" alt="one">
+                </div>
+                <div class="single-img img-four">
+                    <img src="img/4.jpg" alt="one">
+                </div>
+                <div class="single-img img-five">
+                    <img src="img/5.jpg" alt="one">
+                </div>
+                <div class="single-img img-six">
+                    <img src="img/6.jpeg" alt="one">
+                </div>
+            </div>
+        </div>
+        <p>#Marise #Coeur-thiana <br> #MC #MaCo<span id="key"> </span></p>
+        <script>
+
+            const key = document.querySelector("#key");
+            const wrap = document.querySelector(".wrapper");
+            const bday = document.querySelector(".title1");
+            const name = document.querySelector(".title2");
+
+            const ring = (key) => {
+              const audio = new Audio();
+              audio.src = key + ".mp3";
+              console.log(audio.src);
+              audio.play();
+            }
+
+            document.addEventListener("keypress", (e) => {
+                key.textContent = e.key;
+                
+                if(e.key === "b"){
+                    bday.style.visibility = "visible";
+                }else if(e.key === "n"){
+                    name.style.visibility = "visible";
+                }else if (e.key === "m"){
+                    wrap.style.display = "block";
+                }else if(e.key === "r"){
+                    bday.style.visibility = "hidden";
+                }else if(e.key === "e"){
+                    name.style.visibility = "hidden";
+                }else if(e.key === "p"){
+                    wrap.style.display = "none";
+                }
+
+                ring(e.key);
+            });
+        </script>
+    </body>
+</html>

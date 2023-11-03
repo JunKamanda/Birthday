@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>UN</title>
+        <style>
+            body{
+                background: linear-gradient(to right, rgba(255, 0, 0, 0.616), rgba(17, 0, 255, 0.534)), url("img/bck2.jpg"); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- BOX HOVER -->
+            <!-- BOX HOVER -->
+            <div class="title">
+                <h1><span>Love you so much </span>MaCo</h1>
+            </div>
+            
+           
+            <h3>In My Hearth <br>Coeurthi</h3>
+            <div class="box">
+                <img src="img/1 (2).jpg" alt="marise">
+                <img src="img/2.jpeg" alt="narile">
+            </div>
+
+            <!-- TEXTE BIRTHDAY -->
+            <!-- TEXTE BIRTHDAY -->
+            
+            <h2>
+                <span>Happy</span> <span>Birthday</span> <span>K. Marise</span>
+                <p id="key" style="display: none;"></p>
+            </h2>
+
+            <!-- BALLON --><!-- BALLON -->
+            <!-- BALLON --><!-- BALLON -->
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+            <div class="ballon"></div>
+
+
+    <script>
+
+            const key = document.querySelector("#key");
+            const box = document.querySelector(".box");
+
+            const ring = (key) => {
+              const audio = new Audio();
+              audio.src = key + ".mp3";
+              console.log(audio.src);
+              audio.play();
+            }
+
+            document.addEventListener("keypress", (e) => {
+                key.textContent = e.key;
+                
+                if(e.key === "l"){
+                    box.style.visibility = "visible";
+                }
+
+                ring(e.key);
+            });
+        </script>
+    </body>
+</html>

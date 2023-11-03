@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER */
+/* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER *//* BOX HOVER */
+.title{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+}
+h1{
+    background: linear-gradient(to left, rgb(255, 0, 0), rgb(17, 0, 255)); 
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
+.title h1 span{
+    text-transform: uppercase;
+}
+.box{
+    position: absolute;
+    top: 110px;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: -20px 10px 50px black;
+    visibility: hidden;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.39), rgba(17, 0, 255, 0.39)); 
+    width: 300px;
+    height: 400px;
+}
+.box img{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 8s;
+    width: 300px;
+    height: 400px;
+}
+.box img:nth-child(1){
+    transform: rotateY(-180deg);
+}
+.box:hover img:nth-child(2){
+    transform: rotateY(360deg);
+}
+.box:hover img:nth-child(1){
+    transform: rotateY(-360deg);
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+/* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE */
+/* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE *//* TEXTE ANNIVERSAIRE */
+h2{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0e3742;
+    -webkit-box-reflect: below -42px linear-gradient(transparent, #0004);
+}
+h2 span{
+    animation: animate 5s linear infinite;
+}
+h2 span:nth-child(even){
+    animation-delay: 0.4s;
+}
+@keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4,
+            0 0 400px #03bcf4;
+    }
+}
+/* BALLON *//* BALLON *//* BALLON *//* BALLON *//* BALLON *//* BALLON */
+/* BALLON *//* BALLON *//* BALLON *//* BALLON *//* BALLON *//* BALLON */
+.ballon{
+    height: 60px;
+    width: 55px;
+    background: crimson;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    border-radius: 50%;
+    animation: move 2s ease-in infinite;
+}
+@keyframes move{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.ballon::before{
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 55px;
+    height: 60px;
+    width: 6px;
+    background: white;
+}
+.ballon:nth-child(2){
+    left: 20%;
+    top: 40%;
+    background: green;
+    animation-duration: 2s;
+}
+.ballon:nth-child(3){
+    left: 30%;
+    top: 40%;
+    background: yellow;
+    animation-duration: 4s;
+}
+.ballon:nth-child(4){
+    left: 40%;
+    top: 40%;
+    background: red;
+    animation-duration: 5s;
+}
+.ballon:nth-child(5){
+    left: 50%;
+    top: 40%;
+    background: blue;
+    animation-duration: 6s;
+}
+.ballon:nth-child(6){
+    left: 60%;
+    top: 40%;
+    background: white;
+    animation-duration: 5s;
+}
+.ballon:nth-child(7){
+    left: 70%;
+    top: 40%;
+    background: orange;
+    animation-duration: 4s;
+}
+.ballon:nth-child(8){
+    left: 80%;
+    top: 40%;
+    background: #0011fd9c;
+    animation-duration: 3s;
+}
+.ballon:nth-child(9){
+    left: 90%;
+    top: 40%;
+    background: #04ff429c;
+    animation-duration: 2s;
+}

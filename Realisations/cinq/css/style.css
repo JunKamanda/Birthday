@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: inherit;
+    margin: inherit;
+    background: #06031d;
+}
+.bday{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.name{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 100px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-reflect: below -42px linear-gradient(transparent, #0004);
+    text-transform: uppercase;
+}
+p{
+    text-align: center;
+    margin-top: 100px;
+    cursor: pointer;
+    font-size: 50px;
+    background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
